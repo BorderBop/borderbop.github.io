@@ -96,6 +96,42 @@
       text-decoration-thickness: 2px;
     }
 
+    /* Кнопка скачивания */
+    .download-section {
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 2px solid #C4E3FF;
+      text-align: center;
+    }
+
+    .btn-download {
+      display: inline-block;
+      background: linear-gradient(135deg, #1E7DD9, #3B8FE8);
+      color: #FFFFFF;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(30, 125, 217, 0.45);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 40px rgba(30, 125, 217, 0.55);
+      color: #FFFFFF;
+    }
+
+    .btn-download:active {
+      transform: translateY(0);
+    }
+
+    .btn-download::before {
+      content: "⬇ ";
+      font-size: 18px;
+    }
+
     /* Мобильная адаптация */
     @media (max-width: 768px) {
       body {
@@ -152,6 +188,17 @@
 
       li {
         margin-bottom: 10px;
+      }
+
+      .download-section {
+        margin-top: 32px;
+        padding-top: 24px;
+      }
+
+      .btn-download {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 15px;
       }
     }
 
@@ -234,3 +281,7 @@
 
 <h2 style="margin-bottom: 8px;">Education</h2>
     M.S. in Computer Science Kharkiv National University of Radioelectronics, Diploma with distinctions
+
+  <div class="download-section">
+    <a href="YAKOV ZABOROV.pdf" download class="btn-download">Download Resume as PDF</a>
+  </div>
